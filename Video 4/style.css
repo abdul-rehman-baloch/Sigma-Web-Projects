@@ -1,0 +1,64 @@
+@keyframes wiggle {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.bookmark-1:hover {
+    animation: wiggle 0.5s ease-in-out;
+}
+.bookmark-1 {
+    max-width: 70%;
+    max-height: 100vh;
+    display: block;
+    margin: auto;
+    object-fit: contain;
+}
+.heading-1 {
+    color: white;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    max-width: 100%;
+    max-height: 100vh;
+    margin: auto;
+    font-size: 2em;
+    font-weight: bold;
+    animation: colorChange 2s
+ease-in-out infinite;
+}
+@keyframes colorChange {
+    0% {
+        background-color: white;
+    }
+    15% {
+        background-color: #4285F4; 
+    }
+    33.3% {
+        background-color: #0f9d58; 
+    }
+    66.6% {
+        background-color: #f4b400; 
+    }
+    100% {
+        background-color: #db4437; 
+    }
+
+}
+.heading-2 {
+    color: white;
+    max-width: 60%;
+    max-height: 100vh;
+    margin: auto;
+    text-align: center;
+    font-family: Open Sans;
+}
+body {
+    background-color: black;
+}
+.btn {
+    animation: colorChange 2s
+ease-in-out infinite;
+    color:#0f9d58
+}
