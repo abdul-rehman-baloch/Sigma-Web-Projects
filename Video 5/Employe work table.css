@@ -1,0 +1,23 @@
+body {
+    background-color: rgb(113, 160, 95);
+}
+table {
+    border: black;
+    border-color: black;
+    border-collapse: collapse;
+    border-style: solid;
+    width: 100%;
+}
+caption {
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+th, td {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+tbody tr:hover {
+    background-color: #ddd;
+}
