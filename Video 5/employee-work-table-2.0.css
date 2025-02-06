@@ -1,6 +1,6 @@
 table {
     border-collapse: collapse;
-    border: 2px black;
+    border: 2px solid black;
     width: 100%;
 }
 th, td {
@@ -15,7 +15,7 @@ th, td {
 .pending {
     background-color: #F08080;
 }
-.inProgress {
+.in-progress {
     background-color: #FFFFE0;
 }
 thead {
@@ -37,7 +37,21 @@ caption {
     font-weight: bolder;
     font-family: Arial, Helvetica, sans-serif;
     padding: 15px;
+    font-size: 1.4em;
+    text-transform: uppercase;
 }
 body {
     background-color: #EEC6A6;
+}
+.comp {
+    background-color: #497ac9;
+    color: white;
+    font-weight: bolder;
+    text-align: center;
+}
+tbody tr:hover td{
+    background-color: #444444 !important;
+    color: white !important;
+    transition: background-color 0.4s ease-in-out;
+    cursor: pointer;
 }

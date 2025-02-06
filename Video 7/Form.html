@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building a registering form</title>
+</head>
+
+<body>
+    <h2>Registration Form</h2>
+    <form action="submit.php" method="post">
+        <div>
+            <label for="username">Enter Your Full Name</label>
+            <input type="text" name="Username" id="username" placeholder="Name" required autofocus>
+        </div>
+        <div>
+            <label for="email">Type Your Email</label>
+            <input type="email" name="email" id="email" placeholder="Email" required>
+        </div>
+        <div>
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="male" value="male" required>
+            <label for="female">Female</label>
+            <input type="radio" name="gender" id="female" value="female">
+            <label for="none">Prefer not to say</label>
+            <input type="radio" name="gender" id="none" value="none">
+        </div>
+        <div>
+            <label for="subscribe">Subscribe to get latest updates</label>
+            <input type="checkbox" name="subscription" id="subscribe" value="subscribe">
+        </div>
+        <div>
+            <label for="language">Select your favorite programming language:</label>
+            <select name="favorite_language" id="language">
+                <option value="python">Python</option>
+                <option value="java_script">JavaScript</option>
+                <option value="c++">C++</option>
+            </select>
+        </div>
+        <div>
+            <label for="feedback">Please give us your feedback:</label>
+            <textarea name="feedback" id="feedback" rows="4"></textarea>
+        </div>
+        <div>
+            <label for="submit">Click below to submit:</label>
+            <input type="submit" id="submit" value="submit">
+        </div>
+    </form>
+</body>
+
+</html>

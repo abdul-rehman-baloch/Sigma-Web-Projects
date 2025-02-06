@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Employe work table 2.0</title>
-    <link rel="stylesheet" href="Employe work table 2.0.css">
+    <link rel="stylesheet" href="employee-work-table-2.0.css">
 </head>
 <body>
     <table>
-        <caption>Employe work table 2.0</caption>
+        <caption>Employee work table 2.0</caption>
         <thead>
             <tr>
                 <th>Employee Name</th>
@@ -24,37 +24,49 @@
         <tbody>
             <tr>
                 <td class="name">Alice</td>
-                <td rowspan="2" class="dep">IT</td>
-                <td class="task">Coding</td>
+                <td class="dep">IT</td>
+                <td class="task"><strong>Coding</strong></td>
                 <td colspan="2" class="done">✅ Done</td>
-                <td class="inProgress">🚧 In Progress</td>
+                <td class="in-progress">🚧 In Progress</td>
                 <td class="pending">❌ Pending</td>
                 <td class="done">✅ Done</td>
             </tr>
             <tr>
                 <td class="name">Bob</td>
-                <td class="task">Testing</td>
+                <td class="dep">IT</td>
+                <td class="task"><strong>Testing</strong></td>
                 <td class="pending">❌ Pending</td>
                 <td colspan="2" class="done">✅ Done</td>
-                <td class="inProgress">🚧 In progress</td>
+                <td class="in-progress">🚧 In progress</td>
                 <td class="pending">❌ Pending</td>
             </tr>
             <tr>
                 <td class="name">Charlie</td>
-                <td rowspan="2" class="dep">HR</td>
-                <td class="task">Interviews</td>
+                <td class="dep">HR</td>
+                <td class="task"><strong>Interviews</strong></td>
                 <td colspan="4" class="done">✅ Done</td>
-                <td class="inProgress">🚧 In Progress</td>
+                <td class="in-progress">🚧 In Progress</td>
             </tr>
             <tr>
                 <td class="name">Dave</td>
-                <td class="task">Reports</td>
+                <td class="dep">HR</td>
+                <td class="task"><strong>Reports</strong></td>
                 <td class="done">✅ Done</td>
-                <td class="inProgress">🚧 In progress</td>
+                <td class="in-progress">🚧 In progress</td>
                 <td class="pending">❌ Pending</td>
                 <td colspan="2" class="done">✅ Done</td>
             </tr>
         </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3" class="comp"><strong>Overall Completion</strong></td>
+                <td class="done">75%</td>
+                <td class="done">85%</td>
+                <td class="in-progress">60%</td>
+                <td class="pending">50%</td>
+                <td class="done">80%</td>
+            </tr>
+        </tfoot>
     </table>
 </body>
 </html>
