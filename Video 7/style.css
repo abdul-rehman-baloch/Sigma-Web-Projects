@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@600&family=Open+Sans:wght@300;400&display=swap');
+
+body {
+    background-color: #FFF8E7;
+    font-family: 'Open Sans', sans-serif;
+    font-size:larger;
+    font-weight: bold;
+    text-align: center;
+    color: #4B2E39;
+}
+form {
+    margin: auto;
+    max-width: 300px;
+    padding: 20px;
+    border: 2px solid #ecf0f1;
+    border-radius: 20px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+}
+div {
+    padding: 25px;
+
+}
+h2 {
+    font-family: 'Lora', serif;
+    font-weight: 600;
+}
+input, select, textarea {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    color: #4B2E39;
+}
+input[type=text],
+input[type=email],
+select,
+textarea {
+    border: 2px solid #D8A48F;
+    padding: 10px;
+    border-radius: 13px;
+    transition: background 0.3s ease;
+}
+select {
+    cursor: pointer;
+    background-color: #FFFFFF;
+}
+input[type=submit] {
+    background-color: #E76F51;
+    color: white;
+    border: 2px solid #D14728;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    transition: background 0.3s ease;
+    cursor: pointer;
+}
+input[type=submit]:hover {
+    background-color: #D14728;
+}
+option {
+    background: #E76F51;
+    color: white;
+ }
+input[type=text]:hover,
+input[type=email]:hover,
+select:hover,
+textarea:hover {
+    background-color: #F5C6A5;
+}
+::placeholder {
+    color: #4B2E39;
+}
+input[type="radio"] {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #333;
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+    position: relative;
+}
+input[type="radio"]:checked{
+    background-color: #E76F51;
+    border-color: #E76F51;
+}
+input[type="radio"]::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+input[type="radio"]:checked::after {
+    display: block;
+}
+input[type="checkbox"] {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #333;
+    border-radius: 3px;
+    background-color: white;
+    cursor: pointer;
+    position: relative;
+}
+input[type="checkbox"]:checked{
+    background-color: #E76F51;
+    border-color: #E76F51;
+}
+input[type="checkbox"]::after {
+    content: '✔';
+    font-size: 15px;
+    color: white;
+    position: absolute;
+    top: -4px;
+    left: 0px;
+    display: none;
+}
+input[type="checkbox"]:checked::after {
+    display: block;
+}
+input[type=text]:focus,
+input[type=email]:focus,
+select:focus,
+textarea:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus,
+input[type=submit]:focus {
+    outline: 3px solid #2C1E1E; /* Dark Coffee */
+    box-shadow: 0 0 8px rgba(231, 111, 81, 0.8);
+}
+input[type=text],
+input[type=email],
+select,
+textarea,
+input[type="radio"],
+input[type="checkbox"],
+input[type=submit] {
+    transition: all 0.1s ease-in-out;
+}
