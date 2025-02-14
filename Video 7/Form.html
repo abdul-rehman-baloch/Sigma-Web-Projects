@@ -12,27 +12,32 @@
     <h2>Registration Form</h2>
     <form action="submit.php" method="post">
         <div>
-            <label for="username">Enter Your Full Name</label>
+            <div>
+                <label for="username">Enter Your Full Name:</label>
+            </div>
             <input type="text" name="Username" id="username" placeholder="Name" required autofocus>
         </div>
         <div>
-            <label for="email">Type Your Email</label>
+            <div>
+                <label for="email">Type Your Email:</label>
+            </div>
             <input type="email" name="email" id="email" placeholder="Email" required>
         </div>
-        <div>
+        <div id="Gender">
+            <div>
+                <label for="Gender">Select Your Gender:</label>
+            </div>
             <label for="male">Male</label>
             <input type="radio" name="gender" id="male" value="male" required>
             <label for="female">Female</label>
             <input type="radio" name="gender" id="female" value="female">
-            <label for="none">Prefer not to say</label>
+            <label for="none">Prefer Not To Say</label>
             <input type="radio" name="gender" id="none" value="none">
         </div>
         <div>
-            <label for="subscribe">Subscribe to get latest updates</label>
-            <input type="checkbox" name="subscription" id="subscribe" value="subscribe">
-        </div>
-        <div>
-            <label for="language">Select your favorite programming language:</label>
+            <div>
+                <label for="language">Select your favorite programming language:</label>
+            </div>
             <select name="favorite_language" id="language">
                 <option value="python">Python</option>
                 <option value="java_script">JavaScript</option>
@@ -40,13 +45,19 @@
             </select>
         </div>
         <div>
-            <label for="feedback">Please give us your feedback:</label>
             <div>
-                <textarea name="feedback" id="feedback" rows="4"></textarea>
+                <label for="feedback">Please give us your feedback:</label>
             </div>
+            <textarea name="feedback" id="feedback" rows="4"></textarea>
         </div>
         <div>
-            <label for="submit">Click below to submit:</label>
+            <label for="subscribe">Subscribe to get latest updates:</label>
+            <input type="checkbox" name="subscription" id="subscribe" value="subscribe">
+        </div>
+        <div>
+            <div>
+                <label for="submit">Click below to submit:</label>
+            </div>
             <input type="submit" id="submit" value="submit">
         </div>
     </form>

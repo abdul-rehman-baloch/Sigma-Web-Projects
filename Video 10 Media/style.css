@@ -1,0 +1,26 @@
+body {
+    margin: 0; /* Remove default body margin */
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    background-color: black; /* Optional: Background color */
+    text-align: center; /* Center text in h1 */
+}
+h1 {
+    font-size: 48px;
+    font-weight: bold;
+    color: white;
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    background: black; /* Keep background black */
+    background-image: linear-gradient(to right, rgba(168, 201, 212, 0.8), rgba(88, 89, 146, 0.6), rgba(0, 0, 0, 0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+video {
+    width: 90%; /* Set video width */
+    max-width: 600px; /* Optional: Limit maximum width */
+}

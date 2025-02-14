@@ -1,0 +1,45 @@
+.highlight {
+    background-color: black;
+    padding: 40px;
+    margin: 30px;
+    display: inline-block;
+    border: 20px ridge rgb(145, 97, 9);
+}
+#banana {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #ffe135;
+    font-weight: 200%;
+}
+#apple {
+    color: #b24638;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#mango {
+    color: #ffbf35;
+    font-family: fantasy;
+}
+body {
+    background-color: wheat;
+}
+.highlight:hover {
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+#banana:hover {
+    color: rgb(43, 43, 255);
+}
+#mango:hover {
+    color: rgb(59, 59, 255);
+}
+#apple:hover {
+    color: rgb(53, 168, 53);
+}
+.highlight::before {
+    content: "\f005"; /* Unicode for a Font Awesome star icon */
+    font-family: "Font Awesome 5 Free";
+    margin-right: 10px;
+}
+.highlight::after {
+    content: ""; /* Add an emoji or icon after the element */
+    margin-left: 10px; /* Add space between the icon and the text */
+}

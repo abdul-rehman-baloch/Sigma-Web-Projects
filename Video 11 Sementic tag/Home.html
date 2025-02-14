@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sementic tag</title>
+    <style>
+body {
+    font-size: 30px;
+}
+header {
+    background-color: #FF788F;
+    border-radius: 7px;
+    text-align: center;
+    padding: 20px;
+    margin: 15px;
+}
+nav {
+    background-color: #50D890;
+    border-radius: 7px;
+    text-align: center;
+    padding: 0px;
+    margin: 15px;
+}
+.container {
+    display: grid;
+    grid-template-columns: 7fr 13fr;
+}
+aside {
+    display: flex;
+    background-color: #ffCCCC;
+    border-radius: 7px;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 6px 15px 15px;
+}
+main {
+    background-color: #CCEFFF;
+    border-radius: 7px;
+    text-align: center;
+    margin: 0px 15px 15px 6px;
+    padding: 10px 0px;
+}
+article {
+    background-color: #66CCFF;
+    border-radius: 7px;
+    text-align: center;
+    margin: 15px 20px 0px;
+    padding: 5px 0px 10px;
+}
+figure {
+    background-color: #FFEE99;
+    border-radius: 7px;
+    text-align: center;
+    margin: 5px 15px 0px;
+    padding: 30px;
+}
+p {
+    background-color: #dfff80;
+    border-radius: 7px;
+    text-align: center;
+    margin: 5px 15px 0px;
+    padding: 30px;
+}
+section {
+    background-color: #0099FF;
+    border-radius: 7px;
+    text-align: center;
+    margin: 5px 20px 15px;
+    padding: 15px;
+}
+footer {
+    background-color: #AA66FF;
+    border-radius: 7px;
+    text-align: center;
+    padding: 20px;
+    margin: 0px 15px 15px;
+}
+.box {
+    background-color: #f0ebeb;
+    padding: 5px;
+    border-radius: 7px;
+    margin: 10px;
+}
+aside, main, article, figure, p, section, header, footer, nav {
+    min-height: 50px
+}
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <header>
+            header
+        </header>
+        <nav>
+            nav
+        </nav>
+        <div class="container">
+            <aside>
+                aside
+            </aside>
+            <main>
+                main
+                <article>
+                    article
+                    <figure>
+                        figure
+                    </figure>
+                    <p>
+                        p
+                    </p>
+                </article>
+                <section>
+                    secton
+                </section>
+            </main>
+        </div>
+        <footer>
+            footer
+        </footer>
+    </div>
+</body>
+</html>
