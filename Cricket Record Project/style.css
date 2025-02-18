@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;700&family=Montserrat:wght@800&display=swap');
+* {
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+#babar-card { background: linear-gradient(to bottom, #01481E, #01481D); position: relative; }
+    #amla-card { background: linear-gradient(to bottom, #007040, #05AA6C); position: relative; }
+    #kholi-card { background: linear-gradient(to bottom, #002B91, #0B44D1); position: relative; }
+    #kane-card { background: linear-gradient(to bottom, #3C3C3C, #000000); position: relative; }
+    #warner-card { background: linear-gradient(to bottom, #F5FE0A, #E8EB06); position: relative; }
+    #shikhar-card {  background: linear-gradient(to bottom, #0C42D1, #002994); position: relative; }
+    #first-rank { background-color: #CA9400; }
+    #second-rank { background-color: #E9D400; }
+    #third-rank { background-color: #FD4901; }
+    #fourth-rank { background-color: #BBC0D3; }
+    #fifth-rank { background-color: #032F2C; }
+    #sixth-rank { background-color: #FF4900; }
+    #war { color: #032F2C !important; }
+    #david-warner {  color: #032F2C }
+body {
+    text-align: center;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+.face {
+    margin: 0;
+    padding: 20px;
+}
+h1 {
+    font-family: 'montserrat', sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    transform: scale(1.2);
+}
+h3 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: -10px 0px;
+    transform: scale(1.2);
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 15px;
+    padding: 25px 20px;
+}
+@media (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
+.card {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding: 40px;
+    max-height: 100px;
+    cursor: pointer;
+    user-select: none;  /* Prevent text selection */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+.rank {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 8px 20px;
+    color: white;
+    font-family: anton;
+    font-weight: bold;
+    font-size: x-large; 
+    z-index: 2;
+}
+.container-img {
+    display: flex;
+    flex-wrap: wrap; /* Ensure images wrap on smaller screens */
+    justify-content: right;
+    align-items: center;
+    transform: translateY(-10%);
+}
+.animated-img {
+    width: clamp(150px, 20vw, 300px); /* Ensures consistent width */
+    height: clamp(150px, 20vw, 300px); /* Ensures consistent height */
+    object-fit: cover; /* Prevents distortion */
+    transform: scale(1.5); /* Default uniform scaling */
+    user-select: none;  /* Prevent selection */
+    -webkit-user-drag: none; /* Prevent dragging in WebKit browsers */
+    pointer-events: none; /* Prevent interactions if necessary */
+}
+.innings {
+    font-family: 'Anton', sans-serif;
+    font-weight: bold;
+    font-size: 400%;
+    color: white;
+    z-index: 1;
+    letter-spacing: 5px;
+}
+.player-name {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 800;
+    font-size: larger;
+    text-transform: uppercase;
+    white-space: nowrap;
+    line-height: 1;
+    color: white;
+    z-index: 1;
+}
+.innings-container {
+    position: absolute;
+    bottom: 50px; /* Stick it at the bottom */
+    left: 75%;
+    transform: translateX(-50%); /* Centers it horizontally */
+    display: flex;
+    flex-direction: column; /* Stack innings and player-name */
+    align-items: center; /* Keep them centered */
+}
+.name-container {
+    position: absolute;
+    bottom: 30px; /* Stick it at the bottom */
+    left: 75%;
+    transform: translateX(-50%); /* Centers it horizontally */
+    display: flex;
+    align-items: center;
+    z-index: 1; /* Keep them centered */    
+}
+.card:hover .animated-img {
+    transform: scale(2);
+}
+.card .animated-img {
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.8s ease; /* Smooth transition for image scaling */
+}
+.card .innings {
+    height: auto;
+    transition: transform 0.6s ease;
+}
+.card:hover .innings {
+    transform: scale(0.8);
+}
+.card .player-name {
+    transition: transform 0.6s ease;
+}
+.card:hover .player-name {
+    transform: scale(1.6) translate(-6px,6px);
+}
+.card .rank {
+    transition: transform 0.4s ease;
+}
+.card:hover .rank {
+    transform: scale(0.7) translate(-12px,-12px);
+}
+.new-img-container {
+    position: absolute;
+    top: 0; /* Adjust this value to position it vertically */
+    left: 1; /* Align to the extreme left */
+    z-index: 1; /* Ensure it's above other elements if necessary */
+}
+
+.player-img {
+    width: 200px; /* Adjust as needed */
+    height: 200px; /* Adjust as needed */
+    object-fit: cover; /* Prevents distortion */
+    user-select: none;  /* Prevent selection */
+    -webkit-user-drag: none; /* Prevent dragging in WebKit browsers */
+    pointer-events: none; /* Prevent interactions if necessary */
+}
+.card:hover .player-img {
+    transform: scale(1.2) translate(-20px);
+}
+.card .player-img {
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.5s ease; /* Smooth transition for image scaling */
+}

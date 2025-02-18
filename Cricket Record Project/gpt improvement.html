@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;700&family=Montserrat:wght@800&display=swap');
+
+@keyframes slideLeft {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: scale(2) translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: scale(2) translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Preloader Styles */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+/* Loader Animation */
+.loader {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #ddd;
+    border-top: 5px solid #333;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Hide Content Initially */
+.hidden {
+    display: none;
+}
+
+body {
+    text-align: center;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 15px;
+    padding: 20px;
+}
+
+@media (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.card {
+    overflow: hidden;
+    text-align: center;
+    padding: 100px;
+    transition: transform 0.4s ease-in-out;
+    cursor: pointer;
+}
+
+.innings-container {
+    position: absolute;
+    top: 15%;
+    left: clamp(200px, 55vw, 450px);
+}
+
+.rank {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 8px 20px;
+    color: white;
+    font-family: Anton;
+    font-weight: bold;
+    font-size: x-large; 
+    z-index: 1;
+}
+
+.innings {
+    font-family: 'Anton', sans-serif;
+    font-weight: bold;
+    font-size: 400%;
+    color: white;
+    animation: slideLeft 1.5s ease-out;
+}
+
+.player-name {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 800;
+    font-size: larger;
+    text-transform: uppercase;
+    color: white;
+    animation: slideLeft 1.5s ease-out;
+}
+
+.container-img {
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    width: clamp(150px, 20vw, 300px);
+    height: clamp(150px, 20vw, 300px);
+    object-fit: cover;
+    transform: scale(2);
+    animation: slideUp 1s ease-out;
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- Preloader (Shows until the page is fully loaded) -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Main Content (Initially Hidden) -->
+    <div id="content" class="hidden">
+        <h1>FASTEST TO REACH</h1>
+        <h3>6000 ODI runs</h3>
+        <div class="container">
+            <div class="card" id="babar-card">
+                <div class="rank" id="first-rank">1</div>
+                <div class="container-img">
+                    <img src="Boards_logos/PCB_logo.svg" class="animated-img" alt="PCB logo">
+                </div>
+                <div class="innings-container">
+                    <div class="innings">123</div>
+                </div>
+                <div class="player-name">Babar Azam</div>
+            </div>
+            
+            <div class="card" id="amla-card">
+                <div class="rank" id="second-rank">2</div>
+                <div class="container-img">
+                    <img src="Boards_logos/SAB_logo.svg" class="animated-img" alt="South Africa logo">
+                </div>
+                <div class="innings-container">
+                    <div class="innings">123</div>
+                </div>
+                <div class="player-name">Hashim Amla</div>
+            </div>
+
+            <div class="card" id="kholi-card">
+                <div class="rank" id="third-rank">3</div>
+                <div class="container-img">
+                    <img src="Boards_logos/BCCI_logo.svg" class="animated-img" alt="Indian logo">
+                </div>
+                <div class="innings-container">
+                    <div class="innings">136</div>
+                </div>
+                <div class="player-name">Virat Kohli</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener("load", function () {
+    setTimeout(() => {
+        document.getElementById("preloader").style.display = "none"; // Hide preloader
+        document.getElementById("content").classList.remove("hidden"); // Show content
+    }, 500); // Optional delay for smooth transition
+});
+
+// Animate all innings elements
+window.addEventListener("load", () => {
+    document.querySelectorAll(".innings").forEach(el => {
+        el.style.animation = "slideLeft 1.5s ease-out";
+    });
+});
+
+    </script>
+</body>
+</html>
